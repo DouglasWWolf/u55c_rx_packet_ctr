@@ -1,0 +1,35 @@
+# This is the name of the block design we're going to scan
+filename=project.srcs/sources_1/bd/top_level/top_level.bd
+
+# This is the PCIe bridge connection we're looking for
+connection="design.addressing./pcie_bridge/pcie_bridge.address_spaces.M_AXI_B."
+
+# We are going to temporarily create this AXI address map
+addr_map=addr_map.tmp
+
+# If we're just showing the address map, make it so
+if [ "$1" == "-map" ]; then
+    
+    # Create a list of every AXI Slave connected to PCIe bridge
+    parse_xbd $filename | grep $connection >$addr_map
+
+    # Display the connection names and their addresses
+    xlate_vreg -names $addr_map
+
+    # Throw away the temporary file
+    rm $addr_map
+
+    # We're just showing the address map, so we're done
+    exit 0
+fi
+
+# Create a list of every AXI Slave connected to PCIe bridge
+parse_xbd $filename | grep $connection >$addr_map
+
+# Create the "fpga_regs.h" output file 
+xlate_vreg $addr_map fpga_regs.h 
+
+# Throw away the temporary file
+rm $addr_map
+
+

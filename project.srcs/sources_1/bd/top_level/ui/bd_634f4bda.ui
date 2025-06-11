@@ -1,0 +1,59 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-338,-168",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port qsfp0_gt -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD -left
+preplace port qsfp0_clk -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port axis_out -pg 1 -lvl 3 -x 600 -y 210 -defaultsOSRD
+preplace port PCI_AXI -pg 1 -lvl 3 -x 600 -y 60 -defaultsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_sys_resetn -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD
+preplace port port-id_start -pg 1 -lvl 3 -x 600 -y 80 -defaultsOSRD -right
+preplace port port-id_idle -pg 1 -lvl 3 -x 600 -y 120 -defaultsOSRD
+preplace portBus rx_aligned -pg 1 -lvl 0 -x 0 -y 190 -defaultsOSRD -left
+preplace portBus src_address -pg 1 -lvl 3 -x 600 -y 100 -defaultsOSRD -right
+preplace inst packet_sensor -pg 1 -lvl 2 -x 440 -y 190 -defaultsOSRD -pinDir axis_out right -pinY axis_out 20R -pinDir monitor left -pinY monitor 20L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L
+preplace inst eth0 -pg 1 -lvl 1 -x 150 -y 60 -swap {0 1 2 3 4 5 6 7 15 9 10 11 12 13 14 8 16 17 18 19 20 21 23 22} -defaultsOSRD -pinDir qsfp_gt left -pinY qsfp_gt 20L -pinDir qsfp_clk left -pinY qsfp_clk 40L -pinDir rx_stream right -pinY rx_stream 150R -pinDir tx_stream right -pinY tx_stream 20R -pinDir sys_clk left -pinY sys_clk 60L -pinDir sys_resetn left -pinY sys_resetn 150L -pinBusDir rx_aligned left -pinBusY rx_aligned 130L
+preplace inst xmit -pg 1 -lvl 2 -x 440 -y 40 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 45 44 46} -defaultsOSRD -pinDir SRC_AXI right -pinY SRC_AXI 20R -pinDir AXIS_TX left -pinY AXIS_TX 40L -pinDir sys_clk left -pinY sys_clk 60L -pinDir sys_resetn left -pinY sys_resetn 80L -pinBusDir src_address right -pinBusY src_address 60R -pinDir start right -pinY start 40R -pinDir idle right -pinY idle 80R
+preplace netloc eth0_rx_aligned 1 0 1 NJ 190
+preplace netloc pcie_bridge_0_axi_aclk 1 0 2 20 20 290
+preplace netloc pcie_bridge_0_axi_aresetn 1 0 2 20 260 310
+preplace netloc src_address_1 1 2 1 N 100
+preplace netloc start_1 1 2 1 N 80
+preplace netloc xmit_idle 1 2 1 NJ 120
+preplace netloc eth0_qsfp_gt 1 0 1 NJ 80
+preplace netloc eth0_rx_stream 1 1 1 N 210
+preplace netloc packet_sensor_axis_out 1 2 1 NJ 210
+preplace netloc qsfp_clk_0_1 1 0 1 NJ 100
+preplace netloc xmit_AXIS_TX 1 1 1 N 80
+preplace netloc xmit_SRC_AXI 1 2 1 NJ 60
+levelinfo -pg 1 0 150 440 600
+pagesize -pg 1 -db -bbox -sgen -160 0 780 310
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-207,-129",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port qsfp0_gt -pg 1 -lvl 3 -x 580 -y 50 -defaultsOSRD
+preplace port qsfp0_clk -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port port-id_sys_resetn -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace portBus rx_aligned -pg 1 -lvl 3 -x 580 -y 220 -defaultsOSRD
+preplace inst packet_sensor_0 -pg 1 -lvl 2 -x 430 -y 140 -defaultsOSRD
+preplace inst eth0 -pg 1 -lvl 1 -x 160 -y 70 -defaultsOSRD
+preplace netloc pcie_bridge_0_axi_aclk 1 0 2 30 140 NJ
+preplace netloc pcie_bridge_0_axi_aresetn 1 0 2 20 160 NJ
+preplace netloc eth0_rx_aligned 1 1 2 290J 220 NJ
+preplace netloc eth0_rx_stream 1 1 1 300 70n
+preplace netloc eth0_qsfp_gt 1 1 2 NJ 50 NJ
+preplace netloc qsfp_clk_0_1 1 0 1 NJ 50
+levelinfo -pg 1 0 160 430 580
+pagesize -pg 1 -db -bbox -sgen -120 0 740 240
+"
+}
+0
