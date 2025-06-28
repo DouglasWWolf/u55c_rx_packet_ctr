@@ -15,9 +15,17 @@ rm -rf .Xil runtime/.Xil
 
 git add ${folder}/${project}.gen
 git add ${folder}/${project}.hw
-git add ${folder}/${project}.ip_user_files
 git add ${folder}/${project}.srcs
 git add ${folder}/${project}.xpr
+
+folders=(
+    ${folder}/${project}.ip_user_files
+    ${folder}/${project}.sim
+)
+
+for dir in ${folders[@]}; do
+    test -d $dir && git add $dir
+done
 
 git add pre_build.sh post_build.sh release_history.txt
 git add src xdc runtime grab.sh README.md push
